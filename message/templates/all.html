@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+
+{% for o in m %}
+  {%if o.get_user == u %}
+    <b> {{u}} </b>
+  {%else%}
+    <b>{{o.get_to_user}}<b>
+  {%endif%}
+    <small>{{o.get_date}}</small>
+    <br>
+    {{o}}
+    <br>
+    <br>
+{% endfor %}
+
+
+{% endblock %}
