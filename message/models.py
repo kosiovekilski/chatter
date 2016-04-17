@@ -21,3 +21,11 @@ class Message(models.Model):
 
     def get_user(self):
         return self.from_user.username
+
+class Answer(models.Model):
+    message = models.ForeignKey(Message, related_name="the_message")
+    answer = models.CharField(max_length=1000)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __unicode__(self):
+        return self.message.message

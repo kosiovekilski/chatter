@@ -1,28 +1,13 @@
 {% extends "base.html" %}
 {% block body %}
-    <div id="login">
-        <form class="form-horizontal" name="LoginForm" action="/login/" method="post">
-        {% csrf_token %}
-        {% if next %}
-            <input type="hidden" name="next" value="{{ next }}" />
-        {% endif %}
-        <div class="control-group">
-            <label class="control-label" for="username">Username</label>
-            <div class="controls">
-                <input type="text" id="username" name="username"  placeholder="Username">
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="password">Password</label>
-            <div class="controls">
-                <input type="password" name="password" id="password" placeholder="Password">
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
-                <button type="submit" class="btn">Login</button>
-            </div>
-        </div>
-        </form>
+<center>
+<form action='/accounts/auth/' method='POST'> {% csrf_token %}
+    <div style="padding:10px; background-color: #123456; color: #909090; width:200px;">
+        <label for='username'> Username </label>
+        <input type='text' name='Username' id='username'> <br>
+        <label for='password'>Password </label>
+        <input type='password' name='Password' id='password'><br><br>
+        <input type='submit' value='LOGIN'>
     </div>
+</form>
 {% endblock %}

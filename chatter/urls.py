@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^logout/$', views.logout_view, name='logout'),
     url(r'^send/$', views.send, name='send'),
     url(r'^show/$', views.show_my_messages, name='show'),
-    url(r'^show/(?P<user_id>[0-9]+)/$', views.show_messages_user, name='show'), # not working
+    url(r'^show/(?P<message>[0-9]+)/$', views.answer_to, name='answer'),
+    url(r'^accounts/', include('registration.backends.default.urls')),
 ]

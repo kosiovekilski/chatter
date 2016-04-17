@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <b> Answer to {{username}}: {{msg}} </b>
+    <br>
+    <input id="answerto" type="text" name="answerto"/>
+    <br>
+    <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}

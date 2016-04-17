@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block body %}
 
+<style>
+</style>
+<br>
 <form action="" method="post">
     {% csrf_token %}
-    <b> Message to {{rand_user}}</b>
+    <center>
+    <b> Message to Random user </b>
     <br>
-    <input id="message_to_random_user" type="text" name="message_to_random_user"/>
+    <input id="message_to_random_user" type="text" name="message_to_random_user" autofocus/>
     <br>
-    <input type="submit" value="Submit" />
+    <input type="submit" value="SEND" />
 </form>
 
 {% endblock %}

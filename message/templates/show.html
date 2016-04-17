@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 {% block body %}
 
+<style>
+  a {text-decoration: none; color: darkblue; font-size: 30px;}
+  a:hover{color: blue;}
+</style>
 
-
-
-{% for o in u %}
+{% for o in m %}
   <a href="{{o}}">
     <b>
+      <small>{{o.get_date.date}}</small><br>
       {{o}}
     </b>
   </a>
   <br>
 {% endfor %}
-
+</a>
 
 {% endblock %}
